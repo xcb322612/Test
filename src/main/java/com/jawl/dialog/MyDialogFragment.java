@@ -194,7 +194,7 @@ public class MyDialogFragment extends DialogFragment implements View.OnClickList
             Log.e("TAG", "onActivityResult: " + FormatUtils.getFileSize(getActivity(), file.length()));
 
             /**
-             * 使用鲁班图片压缩
+             * 使用开源项目鲁班图片压缩
              */
             Luban.with(getActivity())
                     .load(file.getAbsolutePath())
