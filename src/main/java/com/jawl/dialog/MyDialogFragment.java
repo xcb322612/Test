@@ -206,6 +206,7 @@ public class MyDialogFragment extends DialogFragment implements View.OnClickList
 
                         @Override
                         public void onSuccess(final File file) {
+                            //获取压缩后的图片回调给调用者
                             if (onFinishListener!=null){
                                 onFinishListener.onFile(file);
                             }
