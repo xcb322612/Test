@@ -192,6 +192,10 @@ public class MyDialogFragment extends DialogFragment implements View.OnClickList
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == CAME_CODE && resultCode == Activity.RESULT_OK) {
             Log.e("TAG", "onActivityResult: " + FormatUtils.getFileSize(getActivity(), file.length()));
+
+            /**
+             * 使用鲁班图片压缩
+             */
             Luban.with(getActivity())
                     .load(file.getAbsolutePath())
                     .setCompressListener(new OnCompressListener() {
